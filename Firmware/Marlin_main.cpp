@@ -5108,6 +5108,7 @@ if(eSoundMode!=e_SOUND_MODE_SILENT)
 		#endif // SUPPORT_VERBOSITY
 		plan_buffer_line_curposXYZE(Z_LIFT_FEEDRATE);
 		st_synchronize();
+#if 0
 		if (mesh_point != nMeasPoints * nMeasPoints) {
                Sound_MakeSound(e_SOUND_TYPE_StandardAlert);
                bool bState;
@@ -5144,6 +5145,7 @@ if(eSoundMode!=e_SOUND_MODE_SILENT)
                repeatcommand_front();             // re-run (i.e. of "G80")
                break;
 		}
+#endif
 		clean_up_after_endstop_move(l_feedmultiply);
 //		SERIAL_ECHOLNPGM("clean up finished ");
 
